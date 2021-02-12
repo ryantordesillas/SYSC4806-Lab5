@@ -18,12 +18,23 @@ public class BuddyInfo{
     @Column(nullable = false)
     private String number;
 
+    @Column(nullable = false)
+    private String address;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     public BuddyInfo() {
 
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public AddressBook getBook() {
@@ -39,9 +50,10 @@ public class BuddyInfo{
      * @param name the name of the Buddy
      * @param number the number of the Buddy
      */
-    public BuddyInfo(String name, String number){
+    public BuddyInfo(String name, String number, String address){
         this.name = name;
         this.number = number;
+        this.address = address;
     }
 
     /**
