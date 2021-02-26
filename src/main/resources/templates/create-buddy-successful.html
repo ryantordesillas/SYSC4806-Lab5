@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BuddyInfo Created!</title>
+</head>
+<body>
+    <h1>Created BuddyInfo with properties:</h1>
+    <p th:text="'Name: ' + ${buddy.getName()}"/>
+    <p th:text="'Number: ' + ${buddy.getNumber()}"/>
+    <p th:text="'Address: ' + ${buddy.getAddress()}"/>
+    <ul>
+        <li><a th:href="'/create-buddy/?id=' + ${id}"> Add another buddy to this AddressBook </a></li>
+        <li><a th:href="'/address-book/?id=' + ${id}"> View contents of current AddressBook </a></li>
+        <li><a th:href="'/address-books'"> View list of other AddressBooks </a></li>
+        <li><a th:href="'/create-address-book'"> Create a new AddressBook </a></li>
+    </ul>
+</body>
+</html>

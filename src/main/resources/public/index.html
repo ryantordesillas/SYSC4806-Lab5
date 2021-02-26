@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="initial.js"></script>
+    </head>
+    <body>
+        <p class="data"></p>
+
+        <button type="button" onclick="clickHandler()">Click Me!</button>
+
+        <script>
+            function clickHandler() {
+                $.ajax({
+                    url: "http://localhost:8080/create-address-book"
+                }).then(function(data) {
+                    $('.data').append(data);
+                });
+            }
+        </script>
+
+
+
+    </body>
+</html>

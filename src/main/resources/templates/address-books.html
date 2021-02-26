@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AddressBooks</title>
+</head>
+<body>
+<h1>List of AddressBooks</h1>
+    <tr th:each="book : ${list}">
+        <a th:href="'/address-book/?id=' + ${book.getId()}" th:text="'AddressBook ' + ${book.getId()}"/><br/>
+    </tr>
+
+<ul>
+    <li><a th:href="'/create-address-book'">Create a new AddressBook </a></li>
+</ul>
+</body>
+</html>

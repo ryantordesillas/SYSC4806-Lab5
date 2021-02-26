@@ -7,7 +7,13 @@
 <body>
     <h1>Address Book Contents</h1>
     <tr th:each="buddy : ${buddyList}">
-        <p th:text="${buddy.getName()} +'(' + ${buddy.getNumber()} + ')'"/>
+        <p th:text="${buddy.getName()} +' (' + ${buddy.getNumber()} + '), ' + ${buddy.getAddress()}"/>
     </tr>
+
+    <ul>
+        <li><a th:href="'/create-buddy/?id=' + ${id}"> Add a buddy to this AddressBook </a></li>
+        <li><a th:href="'/address-books'"> View list of other AddressBooks </a></li>
+        <li><a th:href="'/create-address-book'">Create a new AddressBook </a></li>
+    </ul>
 </body>
 </html>

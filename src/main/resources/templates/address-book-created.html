@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AddressBook Created!</title>
+
+</head>
+<body>
+    <p th:text="'AddressBook created with id: ' + ${ab_id}" />
+    <ul>
+        <li><a th:href="'/create-buddy/?id=' + ${ab_id}"> Add a buddy to this AddressBook </a></li>
+        <li><a th:href="'/address-books'"> View list of other AddressBooks </a></li>
+        <li><a th:href="'/create-address-book'">Create another AddressBook </a></li>
+    </ul>
+
+</body>
+</html>

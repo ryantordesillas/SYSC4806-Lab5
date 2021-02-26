@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Address Book Contents</title>
 </head>
 <body>
     <h>There is no AddressBook with that id!</h>
+    <ul>
+        <li><a th:href="'/create-address-book'">Create a new AddressBook </a></li>
+        <li><a th:href="'/address-books'"> View list of other AddressBooks </a></li>
+    </ul>
 </body>
 </html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new BuddyInfo</title>
+</head>
+<body>
+<h1>Creating a BuddyInfo...</h1>
+<form action="#" th:action="@{/create-buddy-successful(id=${id})}" th:object="${buddy}" method="post">
+    <p>Address: <input type="text" th:field="*{address}" /></p>
+    <p>Name: <input type="text" th:field="*{name}" /></p>
+    <p>Number: <input type="text" th:field="*{number}"/></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>

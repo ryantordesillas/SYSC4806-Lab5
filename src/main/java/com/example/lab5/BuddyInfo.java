@@ -102,4 +102,15 @@ public class BuddyInfo{
     public void setId(long id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "BuddyInfo{" +
+                "book=" + book +
+                ", name='" + name + '\'' +
+                ", number='" + number + '\'' +
+                ", address='" + address + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }
